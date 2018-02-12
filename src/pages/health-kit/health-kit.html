@@ -1,0 +1,43 @@
+<ion-content padding>
+  <div >
+    <ion-list>
+      <ion-item>
+        <ion-label>Height:</ion-label>
+        <ion-input *ngIf="!button1colour" type="number" style="outline-color: darkblue;outline-width: medium" [(ngModel)]="heightCm">cm</ion-input>
+        <ion-input *ngIf="!button0colour" type="number" [(ngModel)]="heightFt">ft</ion-input>
+        <ion-input *ngIf="!button0colour" type="number" [(ngModel)]="heightInch">inch</ion-input>
+      </ion-item>
+
+      <button id="button0" ion-button (click)="clickHeightConverter(0)" class="button button-dark customBtn"
+              [color]="button0colour ? 'danger' : 'primary'">cm
+      </button>
+      <!--1-->
+      <button id="button1" ion-button (click)="clickHeightConverter(1)" class="button button-dark customBtn"
+              [color]="button1colour ? 'danger' : 'primary'">ft
+      </button>
+      <!--0-->
+      <ion-item >
+        <ion-label>Weight:</ion-label>
+        <ion-input type="number" [(ngModel)]="weight"><ion-label *ngIf="!button3colour">kg</ion-label><ion-label *ngIf="!button2colour">lbs</ion-label></ion-input>
+      </ion-item>
+      <button id="button2" ion-button (click)="clickWeightConverter(0)" class="button button-dark customBtn"
+              [color]="button2colour ? 'danger' : 'primary'">kg
+      </button>
+      <!--0-->
+      <button id="button3" ion-button (click)="clickWeightConverter(1)" class="button button-dark customBtn"
+              [color]="button3colour ? 'danger' : 'primary'">lbs
+      </button>
+      <!--1-->
+    </ion-list>
+
+    <button id ="bmiButton" ion-button (click)="calculateBMI()" class="button button-dark bmiButton" [color]="bmiButtonColor ? 'danger' : 'primary'">Calculate BMI</button>
+    <br>
+    <div padding="150px">
+      <h1 ion-text color="secondary">BMI value:</h1>
+      <h2 ion-text color="danger" *ngIf="valueActivate">{{bmiValue}}</h2>
+    </div>
+    <button id ="clearButton" ion-button (click)="clearResult()" class="button button-dark clearButton" [color]="'secondary'">Clear Result</button>
+
+
+  </div>
+</ion-content>

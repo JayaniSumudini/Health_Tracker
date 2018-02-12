@@ -1,14 +1,14 @@
 <ion-header>
+
   <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
+    <ion-title>Health Tracker</ion-title>
   </ion-navbar>
 </ion-header>
-
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <ion-tabs #myTabs>
+    <ion-tab [root]="healthKitPage" tabTitle="Health Kit" tabIcon="ios-medkit"></ion-tab>
+    <ion-tab [root]="readPage" tabTitle="Read" tabIcon="ios-book"></ion-tab>
+    <ion-tab [root]="graphPage" tabTitle="Graph" tabIcon="ios-podium"></ion-tab>
+  </ion-tabs>
 </ion-content>
+
