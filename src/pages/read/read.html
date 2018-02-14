@@ -1,3 +1,8 @@
 <ion-content padding>
-  <p>read</p>
+  <div class="row">
+    <div class="col" *ngFor="let tip of healthTipsButtonList; let i = index">
+      <button ion-button (click)="presentActionSheet(i)" class="button button-dark clearButton" [color]="'secondary'">{{tip}}</button>
+    </div>
+  </div>
+
 </ion-content>
