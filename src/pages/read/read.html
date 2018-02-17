@@ -1,8 +1,33 @@
-<ion-content padding>
-  <div class="row">
+<ion-content padding class="back">
+  <ion-card (click)="presentActionSheet(0)">
+    <img src="assets/imgs/beauty.jpg" />
+    <div class="card-title">BEAUTY</div>
+  </ion-card>
+
+  <ion-card (click)="presentActionSheet(1)">
+    <img src="assets/imgs/family.jpg" />
+    <div class="card-title">FAMILY HEALTH</div>
+  </ion-card>
+
+  <ion-card (click)="presentActionSheet(2)">
+    <img src="assets/imgs/fitness.jpg" />
+    <div class="card-title">FITNESS TIPS</div>
+  </ion-card>
+
+  <ion-card (click)="presentActionSheet(3)">
+    <img src="assets/imgs/helthy.jpg" />
+    <div class="card-title">HEALTHY TIPS</div>
+  </ion-card>
+
+  <ion-card (click)="presentActionSheet(4)">
+    <img src="assets/imgs/preg.jpg" />
+    <div class="card-title">PREGNANCY</div>
+  </ion-card>
+
+  <!-- <div class="row">
     <div class="col" *ngFor="let tip of healthTipsButtonList; let i = index">
       <button ion-button (click)="presentActionSheet(i)" class="button button-dark clearButton" [color]="'secondary'">{{tip}}</button>
     </div>
-  </div>
+  </div> -->
 
 </ion-content>

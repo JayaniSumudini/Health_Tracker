@@ -1,3 +1,9 @@
+.back{
+  background:#3a2850;
+  font-weight:100 !important;
+  color: white;
+}
+
 page-health-kit {
   .button.customBtn{
     width:100px;
@@ -5,4 +11,141 @@ page-health-kit {
   .button.bmiButton{
     width:150px;
   }
+
+
+
+
+.speedbox {
+  margin: 3em auto;
+  margin-bottom: 2.4em;
+  height: 200px;
+  width: 200px;
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: column;
+  -webkit-flex-direction: column;
+  align-items: center;
+  -webkit-align-items: center;
+  position: relative;
+  &__groove {
+    height: 100px;
+    width: 200px;
+    background: transparent;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+    border: 5px solid #655977;
+    border-bottom: 0;
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  &__score {
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-0deg);
+    height: 200px;
+    width: 200px;
+    background: transparent;
+    border-radius: 50%;
+    border: 5px solid #30ddc9;
+    box-shadow: 0px 0px 30px #655977;
+    border-color: transparent transparent #30ddc9 #30ddc9;
+    box-sizing: border-box;
+    cursor: pointer;
+    z-index: 1;
+    transition: transform 1s ease;
+    
+  }
+  &__base {
+    width: 240px;
+    height: 130px;
+    background: #3a2850;
+    position: relative;
+    padding-top:65px;
+    text-align: center;
+    color:#aa97c6;
+    top: 100px;
+    z-index: 20;
+    &:before {
+      content: '';
+      width: 240px;
+      position: absolute;
+      top: 0;
+      // border-bottom: 1px solid #3a2850;
+      // box-shadow: 1px 3px 15px rgba(0, 0, 0, 0.5);
+    }
+  }
+  &__odo {
+    text-align: center;
+    position: absolute;
+    color: #ff00fe;
+    bottom: 50px;
+    z-index: 40;
+    left: 50%;
+    transform: translateX(-50%);
+    i {
+      font-size: 13px;
+      opacity: .6;
+    }
+    >div {
+      margin-bottom: 0;
+    }
+    span {
+      font-size: .7em;
+    }
+  }
+  &__ping {
+    font-size: 13px;
+  }
+  &__up {
+    font-size: 18px;
+    line-height: 1.5em;
+    color:#30ddc9;
+  }
+  &__down {
+    font-size: 50px;
+    text-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+    line-height: 1.2em;
+  }
+}
+
+.cal-back{
+  background: #655977;
+  border-radius: 3px;
+  color: white;
+  font-weight: 300 !important;
+
+  input{
+    padding: 3px;
+    margin-top:5px;
+    background: transparent;
+    border: none;
+    border-bottom: 1px dashed white;
+  }
+
+  button{
+    text-transform: none;
+    box-shadow: none;
+    width:80%;
+    margin: 5px auto;
+  }
+
+  .btn{
+    background: #f6c838;
+    color:#3a2850;
+    border-radius: 5px;
+  }
+}
+
+.item-md{
+  background: transparent;
+  color:white;
+  font-size: 13px;
+}
+.item-md.item-block .item-inner{
+  border-bottom-color: transparent;
+}
 }

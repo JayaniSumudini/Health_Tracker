@@ -1,3 +1,25 @@
 page-home {
+  .tabs-md .tabbar{
+    background: #2d1d3f;
+  }
 
+  .tabs-md .tab-button[aria-selected=true]{
+    color:#30ddc9;
+  }
+
+  .tabs-md .tab-button[aria-selected=true] .tab-button-icon{
+    color:#30ddc9;
+  }
+
+  .tabs-md .tab-button{
+    color: #655977;
+  }
+
+  .tabs-md .tab-button-icon{
+    color: #655977;
+  }
+}
+
+.toolbar-title-md{
+  color:#30ddc9;
 }

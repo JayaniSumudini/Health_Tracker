@@ -1,60 +1,49 @@
-<ion-content padding>
-  <div>
-    <ion-list>
-      <ion-item>
-        <ion-label>Height:</ion-label>
-        <ion-input *ngIf="!button1colour" type="number" style="outline-color: darkblue;outline-width: medium" [(ngModel)]="heightCm">cm</ion-input>
-        <ion-input *ngIf="!button0colour" type="number" [(ngModel)]="heightFt">ft</ion-input>
-        <ion-input *ngIf="!button0colour" type="number" [(ngModel)]="heightInch">inch</ion-input>
-      </ion-item>
+<ion-content padding class="back">
 
-      <ion-list>
-        <ion-item>
-          <ion-label *ngIf="isCm">in Centimeters</ion-label>
-          <ion-label *ngIf="!isCm">in Feets</ion-label>
-          <ion-toggle [(ngModel)]="isCm"></ion-toggle>
-        </ion-item>
-      </ion-list>
-
-      <button id="button0" ion-button (click)="clickHeightConverter(0)" class="button button-dark customBtn" [color]="button0colour ? 'danger' : 'primary'">cm
-      </button>
-      <!--1-->
-      <button id="button1" ion-button (click)="clickHeightConverter(1)" class="button button-dark customBtn" [color]="button1colour ? 'danger' : 'primary'">ft
-      </button>
-      <!--0-->
-      <ion-item>
-        <ion-label>Weight:</ion-label>
-        <ion-input type="number" [(ngModel)]="weight">
-          <ion-label *ngIf="!button3colour">kg</ion-label>
-          <ion-label *ngIf="!button2colour">lbs</ion-label>
-        </ion-input>
-      </ion-item>
-
-
-      <ion-list>
-        <ion-item>
-          <ion-label *ngIf="isKg">in Kg</ion-label>
-          <ion-label *ngIf="!isKg">in LBS</ion-label>
-          <ion-toggle [(ngModel)]="isKg"></ion-toggle>
-        </ion-item>
-      </ion-list>
-
-
-      <button id="button2" ion-button (click)="clickWeightConverter(0)" class="button button-dark customBtn" [color]="button2colour ? 'danger' : 'primary'">kg
-      </button>
-      <!--0-->
-      <button id="button3" ion-button (click)="clickWeightConverter(1)" class="button button-dark customBtn" [color]="button3colour ? 'danger' : 'primary'">lbs
-      </button>
-      <!--1-->
-    </ion-list>
-
-    <button id="bmiButton" ion-button (click)="calculateBMI()" class="button button-dark bmiButton" [color]="bmiButtonColor ? 'danger' : 'primary'">Calculate BMI</button>
-    <br>
-    <div padding="150px">
-      <h1 ion-text color="secondary">BMI value:</h1>
-      <h2 ion-text color="danger" *ngIf="valueActivate">{{bmiValue}}</h2>
+  <div class="speedbox">
+    <div class="speedbox__score" id="speedbox-score" [ngStyle]="{'transform':getBMI()}"></div>
+    <div class="speedbox__groove"></div>
+    <div class="speedbox__odo">
+      <div class="speedbox__up">{{bmiType}}</div>
+      <div class="speedbox__down">{{bmiValue| number:'2.1-2'}}</div>
     </div>
-    <button id="clearButton" ion-button (click)="clearResult()" class="button button-dark clearButton" [color]="'secondary'">Clear Result</button>
-
+    <div class="speedbox__base">
+      Calcualate Your BMI value and start work for you
+    </div>
   </div>
+
+  <ion-grid class="cal-back">
+    <ion-row>
+      <ion-col col-6>
+
+        <span style="width:100%;float:left">Height :</span>
+        <input type="text" style="width:100%; float:left" *ngIf="isCm" [(ngModel)]="heightCm">
+        <input type="text" style="width:45%; float:left;margin-right:10%" *ngIf="!isCm" [(ngModel)]="heightFt">
+        <input type="text" style="width:45%; float:left" *ngIf="!isCm" [(ngModel)]="heightInch">
+
+        <ion-item>
+          <ion-label *ngIf="isCm">cm</ion-label>
+          <ion-label *ngIf="!isCm">feet, inch</ion-label>
+          <ion-toggle [(ngModel)]="isCm" color="danger"></ion-toggle>
+        </ion-item>
+
+      </ion-col>
+      <ion-col col-6>
+
+        Weight :
+        <input type="text" style="width:100%" [(ngModel)]="weight">
+
+        <ion-item>
+          <ion-label *ngIf="isKg">Kg</ion-label>
+          <ion-label *ngIf="!isKg">LBS</ion-label>
+          <ion-toggle [(ngModel)]="isKg" color="danger"></ion-toggle>
+        </ion-item>
+
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <button ion-button full class="btn" (click)="calculateBMI()">Calcualate BMI Value</button>
+    </ion-row>
+  </ion-grid>
+
 </ion-content>

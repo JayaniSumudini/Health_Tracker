@@ -1,6 +1,6 @@
-import {Component} from '@angular/core';
-import {NavController} from 'ionic-angular';
-import {ActionSheetController} from 'ionic-angular';
+import { Component } from '@angular/core';
+import { NavController } from 'ionic-angular';
+import { ActionSheetController } from 'ionic-angular';
 
 /**
  * Generated class for the ReadPage page.
