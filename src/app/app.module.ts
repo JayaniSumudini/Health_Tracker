@@ -6,9 +6,9 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import {HealthKitPage} from "../pages/health-kit/health-kit";
-import {ReadPage} from "../pages/read/read";
-import {GraphPage} from "../pages/graph/graph";
+import { HealthKitPage } from "../pages/health-kit/health-kit";
+import { ReadPage } from "../pages/read/read";
+import { GraphPage } from "../pages/graph/graph";
 
 @NgModule({
   declarations: [
@@ -33,7 +33,7 @@ import {GraphPage} from "../pages/graph/graph";
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    { provide: ErrorHandler, useClass: IonicErrorHandler }
   ]
 })
-export class AppModule {}
+export class AppModule { }

@@ -1,5 +1,5 @@
-import {Component} from '@angular/core';
-import {NavController} from 'ionic-angular';
+import { Component } from '@angular/core';
+import { NavController } from 'ionic-angular';
 
 /**
  * Generated class for the HealthKitPage page.
@@ -102,10 +102,10 @@ export class HealthKitPage {
       this.calculateUSCunits(this.weight, heightInCm);
     }
     console.log(this.bmiValue);
-    if(isNaN(this.bmiValue) || this.bmiValue == null){
-      this.bmiValue =0;
+    if (isNaN(this.bmiValue) || this.bmiValue == null) {
+      this.bmiValue = 0;
     }
-    this.bmiValue = parseFloat( this.bmiValue.toFixed(2) );
+    this.bmiValue = parseFloat(this.bmiValue.toFixed(2));
     this.valueActivate = true;
   }
 
