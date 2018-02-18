@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { ActionSheetController } from 'ionic-angular';
+import { ImageReaderPage } from '../image-reader/image-reader';
 
 /**
  * Generated class for the ReadPage page.
@@ -29,12 +30,14 @@ export class ReadPage {
           text: 'Anti Ageing',
           // role: 'destructive',
           handler: () => {
+            this.navCtrl.push(ImageReaderPage, {page: "anti-ageing"})
             console.log('Destructive clicked');
           }
         },
         {
           text: 'Eye care',
           handler: () => {
+            this.navCtrl.push(ImageReaderPage, {page: "eye-care"})
             console.log('Archive clicked');
           }
         },
@@ -42,6 +45,7 @@ export class ReadPage {
           text: 'Face care',
           // role: 'cancel',
           handler: () => {
+            this.navCtrl.push(ImageReaderPage, {page: "face-care"})
             console.log('Cancel clicked');
           }
         },
@@ -49,6 +53,7 @@ export class ReadPage {
           text: 'Foot care',
           // role: 'cancel',
           handler: () => {
+            this.navCtrl.push(ImageReaderPage, {page: "foot-care"})
             console.log('Cancel clicked');
           }
         },
@@ -56,6 +61,7 @@ export class ReadPage {
           text: 'Hair care',
           // role: 'cancel',
           handler: () => {
+            this.navCtrl.push(ImageReaderPage, {page: "hair-care"})
             console.log('Cancel clicked');
           }
         },
@@ -63,6 +69,7 @@ export class ReadPage {
           text: 'Hand and nail care',
           // role: 'cancel',
           handler: () => {
+            this.navCtrl.push(ImageReaderPage, {page: "hand-care"})
             console.log('Cancel clicked');
           }
         },
@@ -70,6 +77,7 @@ export class ReadPage {
           text: 'Lip care',
           // role: 'cancel',
           handler: () => {
+            this.navCtrl.push(ImageReaderPage, {page: "lip-care"})
             console.log('Cancel clicked');
           }
         },
@@ -77,6 +85,7 @@ export class ReadPage {
           text: 'Skin care',
           // role: 'cancel',
           handler: () => {
+            this.navCtrl.push(ImageReaderPage, {page: "skin-care"})
             console.log('Cancel clicked');
           }
         },

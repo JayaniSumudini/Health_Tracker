@@ -9,6 +9,7 @@ import { HomePage } from '../pages/home/home';
 import { HealthKitPage } from "../pages/health-kit/health-kit";
 import { ReadPage } from "../pages/read/read";
 import { GraphPage } from "../pages/graph/graph";
+import { ImageReaderPage } from '../pages/image-reader/image-reader';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { GraphPage } from "../pages/graph/graph";
     HomePage,
     HealthKitPage,
     ReadPage,
-    GraphPage
+    GraphPage,
+    ImageReaderPage
   ],
   imports: [
     BrowserModule,
@@ -28,7 +30,8 @@ import { GraphPage } from "../pages/graph/graph";
     HomePage,
     HealthKitPage,
     ReadPage,
-    GraphPage
+    GraphPage,
+    ImageReaderPage
   ],
   providers: [
     StatusBar,
